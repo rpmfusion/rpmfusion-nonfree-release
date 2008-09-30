@@ -5,7 +5,7 @@
 [rpmfusion-nonfree-updates-testing]
 name=RPM Fusion for Fedora $releasever - Non-Free - Test Updates
 failovermethod=priority
-#baseurl=http://download.rpmfusion.org/nonfree/fedora/updates/testing/$releasever/$basearch/
+#baseurl=http://download1.rpmfusion.org/nonfree/fedora/updates/testing/$releasever/$basearch/
 mirrorlist=http://download1.rpmfusion.org/nonfree/fedora/.mirrorlist-nonfree-fedora-updates-testing
 failovermethod=roundrobin
 enabled=1
