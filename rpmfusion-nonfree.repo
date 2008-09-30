@@ -5,7 +5,7 @@
 [rpmfusion-nonfree]
 name=RPM Fusion for Fedora $releasever - Non-Free
 failovermethod=priority
-#baseurl=http://download.rpmfusion.org/nonfree/fedora/releases/$releasever/Everything/$basearch/os/
+#baseurl=http://download1.rpmfusion.org/nonfree/fedora/releases/$releasever/Everything/$basearch/os/
 mirrorlist=http://download1.rpmfusion.org/nonfree/fedora/.mirrorlist-nonfree-fedora-releases
 failovermethod=roundrobin
 enabled=1
