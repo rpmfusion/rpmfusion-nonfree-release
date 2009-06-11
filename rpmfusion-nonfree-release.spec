@@ -2,7 +2,7 @@
 %define repo nonfree
 
 Name:           rpmfusion-%{repo}-release
-Version:        11
+Version:        11.90
 Release:        1
 Summary:        RPM Fusion (%{repo}) Repository Configuration
 
@@ -93,9 +93,13 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(-,root,root,-)
 %{_sysconfdir}/pki/rpm-gpg/*
-%config %{_sysconfdir}/yum.repos.d/*
+%config(noreplace) %{_sysconfdir}/yum.repos.d/*
 
 %changelog
+* Thu Jun 11 2009 Thorsten Leemhuis <fedora at leemhuis.info> - 11.90-1
+- build for rawhide (enable rawhide, disable all the other repos)
+- mark config file as noreplace which was missing for some strange reason
+
 * Sun May 17 2009 Thorsten Leemhuis <fedora at leemhuis.info> - 11-1
 - F11 release: disable rawhide, enable everything and updates
 - use "metadata_expire=7d" for everything repos
