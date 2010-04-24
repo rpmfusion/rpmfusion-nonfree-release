@@ -2,7 +2,7 @@
 %define repo nonfree
 
 Name:           rpmfusion-%{repo}-release
-Version:        13
+Version:        14
 Release:        0.1
 Summary:        RPM Fusion (%{repo}) Repository Configuration
 
@@ -13,8 +13,8 @@ Source1:        rpmfusion-%{repo}.repo
 Source2:        rpmfusion-%{repo}-updates.repo
 Source3:        rpmfusion-%{repo}-updates-testing.repo
 Source4:        rpmfusion-%{repo}-rawhide.repo
-Source12:       RPM-GPG-KEY-rpmfusion-%{repo}-fedora-12-primary
 Source13:       RPM-GPG-KEY-rpmfusion-%{repo}-fedora-13-primary
+Source14:       RPM-GPG-KEY-rpmfusion-%{repo}-fedora-14-primary
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildArch:      noarch
 
@@ -60,7 +60,9 @@ install -d -m755 \
   $RPM_BUILD_ROOT%{_sysconfdir}/yum.repos.d
 
 # GPG Key
-%{__install} -Dp -m644 %{SOURCE12} %{SOURCE13} \
+%{__install} -Dp -m644 \
+    %{SOURCE13} \
+    %{SOURCE14} \
     $RPM_BUILD_ROOT%{_sysconfdir}/pki/rpm-gpg
 
 # compatibility symlink for easy transition to F11
@@ -68,16 +70,17 @@ ln -s $(basename %{SOURCE12}) $RPM_BUILD_ROOT%{_sysconfdir}/pki/rpm-gpg/RPM-GPG-
 
 # Links for the keys
 for i in i386 x86_64 ppc ppc64; do
-  ln -s $(basename %{SOURCE12}) $RPM_BUILD_ROOT%{_sysconfdir}/pki/rpm-gpg/RPM-GPG-KEY-rpmfusion-%{repo}-fedora-12-${i}
   ln -s $(basename %{SOURCE13}) $RPM_BUILD_ROOT%{_sysconfdir}/pki/rpm-gpg/RPM-GPG-KEY-rpmfusion-%{repo}-fedora-13-${i}
-  ln -s $(basename %{SOURCE12}) $RPM_BUILD_ROOT%{_sysconfdir}/pki/rpm-gpg/RPM-GPG-KEY-rpmfusion-%{repo}-fedora-latest-${i}
-  ln -s $(basename %{SOURCE13}) $RPM_BUILD_ROOT%{_sysconfdir}/pki/rpm-gpg/RPM-GPG-KEY-rpmfusion-%{repo}-fedora-rawhide-${i}
+  ln -s $(basename %{SOURCE14}) $RPM_BUILD_ROOT%{_sysconfdir}/pki/rpm-gpg/RPM-GPG-KEY-rpmfusion-%{repo}-fedora-14-${i}
+  ln -s $(basename %{SOURCE13}) $RPM_BUILD_ROOT%{_sysconfdir}/pki/rpm-gpg/RPM-GPG-KEY-rpmfusion-%{repo}-fedora-latest-${i}
+  ln -s $(basename %{SOURCE14}) $RPM_BUILD_ROOT%{_sysconfdir}/pki/rpm-gpg/RPM-GPG-KEY-rpmfusion-%{repo}-fedora-rawhide-${i}
 done
 
 
 # Yum .repo files
 %{__install} -p -m644 %{SOURCE1} %{SOURCE2} %{SOURCE3} %{SOURCE4} \
     $RPM_BUILD_ROOT%{_sysconfdir}/yum.repos.d
+
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -88,7 +91,14 @@ rm -rf $RPM_BUILD_ROOT
 %config(noreplace) %{_sysconfdir}/yum.repos.d/*
 
 %changelog
-* Sun Nov 22 2009 Thorsten Leemhuis <fedora at leemhuis.info> - 13-1
+* Sat Apr 24 2010 Thorsten Leemhuis <fedora at leemhuis.info> - 14-0.1
+- rebuild for rawhide
+
+* Fri Apr 16 2010 Thorsten Leemhuis <fedora at leemhuis.info> - 13-1
+- add key for Rawhide/F14
+- remove key for F12
+
+* Sun Nov 22 2009 Thorsten Leemhuis <fedora at leemhuis.info> - 13-0.1
 - Bump for Fedora 13's rawhide.
 - Put the version at 13 from the start. 
 - drop post script
@@ -100,7 +110,6 @@ rm -rf $RPM_BUILD_ROOT
 
 * Thu Jun 11 2009 Thorsten Leemhuis <fedora at leemhuis.info> - 11.90-1
 - build for rawhide (enable rawhide, disable all the other repos)
-- mark config file as noreplace which was missing for some strange reason
 
 * Sun May 17 2009 Thorsten Leemhuis <fedora at leemhuis.info> - 11-1
 - F11 release: disable rawhide, enable everything and updates
@@ -152,14 +161,18 @@ rm -rf $RPM_BUILD_ROOT
 - s|basearch/debug/|basearch/os/debug/|" in *rawhide.repo
 
 * Sun Sep 28 2008 Thorsten Leemhuis <fedora at leemhuis.info> - 9.90-2
+- Fix rpmfusion-rpmfusion typo (again)
 - update summary to properly say free or nonfree
 
 * Sat Sep 27 2008 Thorsten Leemhuis <fedora at leemhuis.info> - 9.90-1
 - Update for Fedora 10 rawhide
 - enable devel repos, disable all the others
 
-* Sat Sep 27 2008 Stewart Adam <s.adam at diffingo.com> - 9-6
+* Sat Sep 27 2008 Stewart Adam <s.adam at diffingo.com> - 9-7
 - Use temporary mirrorlists for now, and baseurl for the debug & source repos
+
+* Thu Sep 18 2008 Stewart Adam <s.adam at diffingo.com> - 9-6
+- Fix rpmfusion-rpmfusion typo
 
 * Mon Aug 18 2008 Stewart Adam <s.adam at diffingo.com> - 9-5
 - Use mirrors.rpmfusion.org instead of rpmfusion.org/mirrorlist
