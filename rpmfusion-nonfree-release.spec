@@ -3,7 +3,7 @@
 
 Name:           rpmfusion-%{repo}-release
 Version:        13
-Release:        1
+Release:        2
 Summary:        RPM Fusion (%{repo}) Repository Configuration
 
 Group:          System Environment/Base
@@ -66,7 +66,7 @@ install -d -m755 \
     $RPM_BUILD_ROOT%{_sysconfdir}/pki/rpm-gpg
 
 # compatibility symlink for easy transition to F11
-ln -s $(basename %{SOURCE12}) $RPM_BUILD_ROOT%{_sysconfdir}/pki/rpm-gpg/RPM-GPG-KEY-rpmfusion-%{repo}-fedora
+ln -s $(basename %{SOURCE13}) $RPM_BUILD_ROOT%{_sysconfdir}/pki/rpm-gpg/RPM-GPG-KEY-rpmfusion-%{repo}-fedora
 
 # Links for the keys
 for i in i386 x86_64 ppc ppc64; do
@@ -91,6 +91,9 @@ rm -rf $RPM_BUILD_ROOT
 %config(noreplace) %{_sysconfdir}/yum.repos.d/*
 
 %changelog
+* Mon Apr 26 2010 Thorsten Leemhuis <fedora at leemhuis.info> - 13-2
+- fix compatibility symlink
+
 * Fri Apr 16 2010 Thorsten Leemhuis <fedora at leemhuis.info> - 13-1
 - add key for Rawhide/F14
 - remove key for F12
@@ -107,7 +110,6 @@ rm -rf $RPM_BUILD_ROOT
 
 * Thu Jun 11 2009 Thorsten Leemhuis <fedora at leemhuis.info> - 11.90-1
 - build for rawhide (enable rawhide, disable all the other repos)
-- mark config file as noreplace which was missing for some strange reason
 
 * Sun May 17 2009 Thorsten Leemhuis <fedora at leemhuis.info> - 11-1
 - F11 release: disable rawhide, enable everything and updates
@@ -159,14 +161,18 @@ rm -rf $RPM_BUILD_ROOT
 - s|basearch/debug/|basearch/os/debug/|" in *rawhide.repo
 
 * Sun Sep 28 2008 Thorsten Leemhuis <fedora at leemhuis.info> - 9.90-2
+- Fix rpmfusion-rpmfusion typo (again)
 - update summary to properly say free or nonfree
 
 * Sat Sep 27 2008 Thorsten Leemhuis <fedora at leemhuis.info> - 9.90-1
 - Update for Fedora 10 rawhide
 - enable devel repos, disable all the others
 
-* Sat Sep 27 2008 Stewart Adam <s.adam at diffingo.com> - 9-6
+* Sat Sep 27 2008 Stewart Adam <s.adam at diffingo.com> - 9-7
 - Use temporary mirrorlists for now, and baseurl for the debug & source repos
+
+* Thu Sep 18 2008 Stewart Adam <s.adam at diffingo.com> - 9-6
+- Fix rpmfusion-rpmfusion typo
 
 * Mon Aug 18 2008 Stewart Adam <s.adam at diffingo.com> - 9-5
 - Use mirrors.rpmfusion.org instead of rpmfusion.org/mirrorlist
