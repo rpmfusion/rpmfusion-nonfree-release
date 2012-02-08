@@ -3,7 +3,7 @@
 
 Name:           rpmfusion-%{repo}-release
 Version:        17
-Release:        0.1
+Release:        0.2
 Summary:        RPM Fusion (%{repo}) Repository Configuration
 
 Group:          System Environment/Base
@@ -91,6 +91,9 @@ rm -rf $RPM_BUILD_ROOT
 %config(noreplace) %{_sysconfdir}/yum.repos.d/*
 
 %changelog
+* Thu Feb 09 2012 Nicolas Chauvet <kwizart@gmail.com> - 17-0.2
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_17_Mass_Rebuild
+
 * Sat Nov 19 2011 Nicolas Chauvet <kwizart@gmail.com> - 17-0.1
 - build for rawhide/F-17
 - Drop key for F-15
