@@ -26,7 +26,6 @@ Conflicts:      apt < 0.5.15lorg3
 
 %if %{repo} == "nonfree"
 Requires:       rpmfusion-free-release >= %{version}
-%endif
 
 %description
 RPM Fusion repository contains open source and other distributable software for
