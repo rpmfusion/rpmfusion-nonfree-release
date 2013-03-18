@@ -1,5 +1,5 @@
-%define repo free
-#define repo nonfree
+#define repo free
+%define repo nonfree
 
 Name:           rpmfusion-%{repo}-release
 Version:        17.0.5
