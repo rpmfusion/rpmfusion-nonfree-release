@@ -3,7 +3,7 @@
 
 Name:           rpmfusion-%{repo}-release
 Version:        22
-Release:        0.1
+Release:        1
 Summary:        RPM Fusion (%{repo}) Repository Configuration
 
 Group:          System Environment/Base
@@ -64,7 +64,7 @@ install -d -m755 \
     $RPM_BUILD_ROOT%{_sysconfdir}/pki/rpm-gpg
 
 # compatibility symlink for easy transition to F11
-ln -s $(basename %{SOURCE21}) $RPM_BUILD_ROOT%{_sysconfdir}/pki/rpm-gpg/RPM-GPG-KEY-rpmfusion-%{repo}-fedora
+ln -s $(basename %{SOURCE22}) $RPM_BUILD_ROOT%{_sysconfdir}/pki/rpm-gpg/RPM-GPG-KEY-rpmfusion-%{repo}-fedora
 
 # Avoid using basearch in name for the key. Introduced in F18
 ln -s $(basename %{SOURCE22}) $RPM_BUILD_ROOT%{_sysconfdir}/pki/rpm-gpg/RPM-GPG-KEY-rpmfusion-%{repo}-fedora-22
@@ -86,6 +86,9 @@ ln -s $(basename %{SOURCE24}) $RPM_BUILD_ROOT%{_sysconfdir}/pki/rpm-gpg/RPM-GPG-
 %config(noreplace) %{_sysconfdir}/yum.repos.d/*
 
 %changelog
+* Sat May 23 2015 Nicolas Chauvet <kwizart@gmail.com> - 22-1
+- Update to Final F-22
+
 * Tue May 05 2015 Nicolas Chauvet <kwizart@gmail.com> - 22-0.1
 - Bump for branched/f22
 
