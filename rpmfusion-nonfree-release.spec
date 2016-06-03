@@ -86,7 +86,7 @@ ln -s $(basename %{SOURCE25}) $RPM_BUILD_ROOT%{_sysconfdir}/pki/rpm-gpg/RPM-GPG-
 %config(noreplace) %{_sysconfdir}/yum.repos.d/*
 
 %changelog
-* Fri May 16 2016 Nicolas Chauvet <kwizart@gmail.com> - 23-1
+* Mon May 16 2016 Nicolas Chauvet <kwizart@gmail.com> - 23-1
 - Update to final f23
 
 * Sat Oct 24 2015 Nicolas Chauvet <kwizart@gmail.com> - 23-0.1
