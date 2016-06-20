@@ -3,7 +3,7 @@
 
 Name:           rpmfusion-%{repo}-release
 Version:        23
-Release:        1
+Release:        2
 Summary:        RPM Fusion (%{repo}) Repository Configuration
 
 Group:          System Environment/Base
@@ -86,6 +86,9 @@ ln -s $(basename %{SOURCE25}) $RPM_BUILD_ROOT%{_sysconfdir}/pki/rpm-gpg/RPM-GPG-
 %config(noreplace) %{_sysconfdir}/yum.repos.d/*
 
 %changelog
+* Mon Jun 20 2016 Nicolas Chauvet <kwizart@gmail.com> - 23-2
+- Enable updates - Fixup debug
+
 * Mon May 16 2016 Nicolas Chauvet <kwizart@gmail.com> - 23-1
 - Update to final f23
 
