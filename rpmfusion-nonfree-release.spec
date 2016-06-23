@@ -1,9 +1,9 @@
-#define repo free
+#efine repo free
 %define repo nonfree
 
 Name:           rpmfusion-%{repo}-release
 Version:        24
-Release:        0.1
+Release:        1
 Summary:        RPM Fusion (%{repo}) Repository Configuration
 
 Group:          System Environment/Base
@@ -86,8 +86,15 @@ ln -s $(basename %{SOURCE25}) $RPM_BUILD_ROOT%{_sysconfdir}/pki/rpm-gpg/RPM-GPG-
 %config(noreplace) %{_sysconfdir}/yum.repos.d/*
 
 %changelog
+* Thu Jun 23 2016 Nicolas Chauvet <kwizart@gmail.com> - 24-1
+- Update to Final f24
+
+* Wed Jun 22 2016 Nicolas Chauvet <kwizart@gmail.com> - 24-0.2
+- Re-enable signature for updates-testing
+
 * Sat May 14 2016 Nicolas Chauvet <kwizart@gmail.com> - 24-0.1
 - Update to 24
+- Disable gpg signature on updates-testing for now
 
 * Sat Oct 24 2015 Nicolas Chauvet <kwizart@gmail.com> - 23-0.1
 - Bump for branched/f23
