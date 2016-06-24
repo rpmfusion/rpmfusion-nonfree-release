@@ -2,8 +2,8 @@
 name=RPM Fusion for Fedora Rawhide - Nonfree
 #baseurl=http://download1.rpmfusion.org/nonfree/fedora/development/$basearch/os/
 mirrorlist=http://mirrors.rpmfusion.org/mirrorlist?repo=nonfree-fedora-rawhide&arch=$basearch
-enabled=0
-gpgcheck=1
+enabled=1
+gpgcheck=0
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-rpmfusion-nonfree-fedora-latest file:///etc/pki/rpm-gpg/RPM-GPG-KEY-rpmfusion-nonfree-fedora-rawhide
 
 [rpmfusion-nonfree-rawhide-debuginfo]
