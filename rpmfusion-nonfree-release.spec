@@ -3,7 +3,7 @@
 
 Name:           rpmfusion-%{repo}-release
 Version:        25
-Release:        0.2
+Release:        0.3
 Summary:        RPM Fusion (%{repo}) Repository Configuration
 
 Group:          System Environment/Base
@@ -86,7 +86,11 @@ ln -s $(basename %{SOURCE25}) $RPM_BUILD_ROOT%{_sysconfdir}/pki/rpm-gpg/RPM-GPG-
 %config(noreplace) %{_sysconfdir}/yum.repos.d/*
 
 %changelog
-* Fri Jun 24 2016 Nicolas Chauvet <kwizart@gmail.com> - 24-2
+* Sun Jul 24 2016 Sérgio Basto <sergio@serjux.com> - 25-0.3
+- Fix rpmfusion-nonfree-updates-testing.repo, reported on IRC by raveit65
+- Fix changelog typo.
+
+* Fri Jun 24 2016 Nicolas Chauvet <kwizart@gmail.com> - 25-0.2
 - Bump for rawhide release
 
 * Sun May 15 2016 Nicolas Chauvet <kwizart@gmail.com> - 25-0.1
