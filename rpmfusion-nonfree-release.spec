@@ -86,9 +86,8 @@ ln -s $(basename %{SOURCE25}) $RPM_BUILD_ROOT%{_sysconfdir}/pki/rpm-gpg/RPM-GPG-
 %config(noreplace) %{_sysconfdir}/yum.repos.d/*
 
 %changelog
-* Sun Jul 24 2016 Sérgio Basto <sergio@serjux.com> - 25-0.3
-- Fix rpmfusion-nonfree-updates-testing.repo, reported on IRC by raveit65
-- Fix changelog typo.
+* Wed Aug 10 2016 Nicolas Chauvet <nicolas.chauvet@kwizart.fr> - 25-0.3
+- Switch to branched layout
 
 * Fri Jun 24 2016 Nicolas Chauvet <kwizart@gmail.com> - 25-0.2
 - Bump for rawhide release
