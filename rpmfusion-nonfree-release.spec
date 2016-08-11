@@ -2,8 +2,8 @@
 %define repo nonfree
 
 Name:           rpmfusion-%{repo}-release
-Version:        25
-Release:        0.3
+Version:        26
+Release:        0.1
 Summary:        RPM Fusion (%{repo}) Repository Configuration
 
 Group:          System Environment/Base
@@ -86,9 +86,8 @@ ln -s $(basename %{SOURCE25}) $RPM_BUILD_ROOT%{_sysconfdir}/pki/rpm-gpg/RPM-GPG-
 %config(noreplace) %{_sysconfdir}/yum.repos.d/*
 
 %changelog
-* Sun Jul 24 2016 Sérgio Basto <sergio@serjux.com> - 25-0.3
-- Fix rpmfusion-nonfree-updates-testing.repo, reported on IRC by raveit65
-- Fix changelog typo.
+* Sat Aug 06 2016 Nicolas Chauvet <kwizart@gmail.com> - 26-0.1
+- Bump for f26
 
 * Fri Jun 24 2016 Nicolas Chauvet <kwizart@gmail.com> - 25-0.2
 - Bump for rawhide release
