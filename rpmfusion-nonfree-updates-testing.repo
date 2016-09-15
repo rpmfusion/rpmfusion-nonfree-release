@@ -1,0 +1,24 @@
+[rpmfusion-nonfree-updates-testing]
+name=RPM Fusion for EL 7 - Nonfree - Test Updates
+#baseurl=http://download1.rpmfusion.org/nonfree/el/updates/testing/7/$basearch/
+mirrorlist=http://mirrors.rpmfusion.org/mirrorlist?repo=nonfree-el-updates-testing-7&arch=$basearch
+enabled=0
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-rpmfusion-nonfree-el-7
+
+[rpmfusion-nonfree-updates-testing-debuginfo]
+name=RPM Fusion for EL 7 - Nonfree - Test Updates Debug
+#baseurl=http://download1.rpmfusion.org/nonfree/el/updates/testing/7/$basearch/debug/
+mirrorlist=http://mirrors.rpmfusion.org/mirrorlist?repo=nonfree-el-updates-testing-debug-7&arch=$basearch
+enabled=0
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-rpmfusion-nonfree-el-7
+
+[rpmfusion-nonfree-updates-testing-source]
+name=RPM Fusion for EL 7 - Nonfree - Test Updates Source
+#baseurl=http://download1.rpmfusion.org/nonfree/el/updates/testing/7/SRPMS/
+mirrorlist=http://mirrors.rpmfusion.org/mirrorlist?repo=nonfree-el-updates-testing-source-7&arch=$basearch
+enabled=0
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-rpmfusion-nonfree-el-7
+
