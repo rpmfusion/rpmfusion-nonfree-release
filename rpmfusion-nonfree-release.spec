@@ -3,8 +3,8 @@
 %global israwhide 1
 
 Name:           rpmfusion-%{repo}-release
-Version:        27
-Release:        0.3
+Version:        28
+Release:        0.1
 Summary:        RPM Fusion (%{repo}) Repository Configuration
 
 Group:          System Environment/Base
@@ -90,6 +90,9 @@ ln -s $(basename %{SOURCE28}) %{buildroot}%{_sysconfdir}/pki/rpm-gpg/RPM-GPG-KEY
 %config(noreplace) %{_sysconfdir}/yum.repos.d/rpmfusion-%{repo}-rawhide.repo
 
 %changelog
+* Wed Sep 06 2017 Leigh Scott <leigh123linux@googlemail.com> - 28-0.1
+- Bump for 28
+
 * Fri Jul 07 2017 Nicolas Chauvet <kwizart@gmail.com> - 27-0.3
 - Bump for f26 key
 
@@ -108,7 +111,7 @@ ln -s $(basename %{SOURCE28}) %{buildroot}%{_sysconfdir}/pki/rpm-gpg/RPM-GPG-KEY
 - Add a rawhide sub-package - rfbz#3223
 - Mark gpg keys as %%config
 
-* Wed Nov 02 2016 Nicolas Chauvet <kwizart@gmail.com> - 26-0.3
+* Wed Nov 02 2016 Nicolas Chauvet <kwizart@gmail.com> - 28-0.3
 - Add metalink over https
 
 * Wed Aug 24 2016 Sérgio Basto <sergio@serjux.com> - 26-0.2
