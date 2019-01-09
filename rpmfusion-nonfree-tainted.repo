@@ -1,33 +1,33 @@
 [rpmfusion-nonfree-tainted]
-name=RPM Fusion for Fedora $releasever - Nonfree tainted
-#baseurl=http://download1.rpmfusion.org/nonfree/fedora/tainted/$releasever/$basearch/
-metalink=https://mirrors.rpmfusion.org/metalink?repo=nonfree-fedora-tainted-$releasever&arch=$basearch
+name=RPM Fusion for EL 8 - Nonfree tainted
+#baseurl=http://download1.rpmfusion.org/nonfree/el/tainted/8/$basearch/
+metalink=https://mirrors.rpmfusion.org/metalink?repo=nonfree-el-tainted-8&arch=$basearch
 enabled=1
-metadata_expire=14d
+metadata_expire=6h
 type=rpm-md
 gpgcheck=1
 repo_gpgcheck=0
-gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-rpmfusion-nonfree-fedora-$releasever
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-rpmfusion-nonfree-el-8
 
 [rpmfusion-nonfree-tainted-debuginfo]
-name=RPM Fusion for Fedora $releasever - Nonfree tainted - Debug
-#baseurl=http://download1.rpmfusion.org/nonfree/fedora/tainted/$releasever/$basearch/debug/
-metalink=https://mirrors.rpmfusion.org/metalink?repo=nonfree-fedora-tainted-debug-$releasever&arch=$basearch
+name=RPM Fusion for EL 8 - Nonfree tainted - Debug
+#baseurl=http://download1.rpmfusion.org/nonfree/el/tainted/8/$basearch/debug/
+metalink=https://mirrors.rpmfusion.org/metalink?repo=nonfree-el-tainted-debug-8&arch=$basearch
 enabled=0
-metadata_expire=7d
+metadata_expire=6h
 type=rpm-md
 gpgcheck=1
 repo_gpgcheck=0
-gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-rpmfusion-nonfree-fedora-$releasever
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-rpmfusion-nonfree-el-8
 
 [rpmfusion-nonfree-tainted-source]
-name=RPM Fusion for Fedora $releasever - Nonfree tainted - Source
-#baseurl=http://download1.rpmfusion.org/nonfree/fedora/tainted/$releasever/SRPMS/
-metalink=https://mirrors.rpmfusion.org/metalink?repo=nonfree-fedora-tainted-source-$releasever&arch=$basearch
+name=RPM Fusion for EL 8 - Nonfree tainted - Source
+#baseurl=http://download1.rpmfusion.org/nonfree/el/tainted/8/SRPMS/
+metalink=https://mirrors.rpmfusion.org/metalink?repo=nonfree-el-tainted-source-8&arch=$basearch
 enabled=0
-metadata_expire=7d
+metadata_expire=6h
 type=rpm-md
 gpgcheck=1
 repo_gpgcheck=0
-gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-rpmfusion-nonfree-fedora-$releasever
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-rpmfusion-nonfree-el-8
 
