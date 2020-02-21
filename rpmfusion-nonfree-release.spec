@@ -4,7 +4,7 @@
 
 Name:           rpmfusion-%{repo}-release
 Version:        31
-Release:        1
+Release:        2
 Summary:        RPM Fusion (%{repo}) Repository Configuration
 
 License:        BSD
@@ -106,6 +106,9 @@ ln -s $(basename %{SOURCE33}) %{buildroot}%{_sysconfdir}/pki/rpm-gpg/RPM-GPG-KEY
 %config(noreplace) %{_sysconfdir}/yum.repos.d/rpmfusion-%{repo}-tainted.repo
 
 %changelog
+* Fri Feb 21 2020 Leigh Scott <leigh123linux@googlemail.com> - 31-2
+- Rebuild for 2020 key
+
 * Mon Oct 21 2019 Leigh Scott <leigh123linux@googlemail.com> - 31-1
 - Release for f31
 
