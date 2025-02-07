@@ -1,33 +1,33 @@
 [rpmfusion-nonfree-next-testing]
-name=RPM Fusion for EL 9 - Nonfree - Next Test
-#baseurl=http://download1.rpmfusion.org/nonfree/el/testing/next/9/$basearch/
-metalink=https://mirrors.rpmfusion.org/metalink?repo=nonfree-el-next-test-9&arch=$basearch
+name=RPM Fusion for EL 10 - Nonfree - Next Test
+#baseurl=http://download1.rpmfusion.org/nonfree/el/testing/next/10/$basearch/
+metalink=https://mirrors.rpmfusion.org/metalink?repo=nonfree-el-next-test-10&arch=$basearch
 enabled=0
 metadata_expire=6h
 type=rpm-md
 gpgcheck=1
 repo_gpgcheck=0
-gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-rpmfusion-nonfree-el-9
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-rpmfusion-nonfree-el-10
 
 [rpmfusion-nonfree-next-testing-debuginfo]
-name=RPM Fusion for EL 9 - Nonfree - Next Test Debug
-#baseurl=http://download1.rpmfusion.org/nonfree/el/testing/next/9/$basearch/debug/
-metalink=https://mirrors.rpmfusion.org/metalink?repo=nonfree-el-next-test-debug-9&arch=$basearch
+name=RPM Fusion for EL 10 - Nonfree - Next Test Debug
+#baseurl=http://download1.rpmfusion.org/nonfree/el/testing/next/10/$basearch/debug/
+metalink=https://mirrors.rpmfusion.org/metalink?repo=nonfree-el-next-test-debug-10&arch=$basearch
 enabled=0
 metadata_expire=6h
 type=rpm-md
 gpgcheck=1
 repo_gpgcheck=0
-gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-rpmfusion-nonfree-el-9
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-rpmfusion-nonfree-el-10
 
 [rpmfusion-nonfree-next-testing-source]
-name=RPM Fusion for EL 9 - Nonfree - Next Test Source
-#baseurl=http://download1.rpmfusion.org/nonfree/el/testing/next/9/SRPMS/
-metalink=https://mirrors.rpmfusion.org/metalink?repo=nonfree-el-next-test-source-9&arch=$basearch
+name=RPM Fusion for EL 10 - Nonfree - Next Test Source
+#baseurl=http://download1.rpmfusion.org/nonfree/el/testing/next/10/SRPMS/
+metalink=https://mirrors.rpmfusion.org/metalink?repo=nonfree-el-next-test-source-10&arch=$basearch
 enabled=0
 metadata_expire=6h
 type=rpm-md
 gpgcheck=1
 repo_gpgcheck=0
-gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-rpmfusion-nonfree-el-9
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-rpmfusion-nonfree-el-10
 
